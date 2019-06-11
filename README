@@ -1,0 +1,12 @@
+This is a project for detecting face or recognizing faces
+
+faceDetect.ipynb is a file using dlib which is a python library, and this file runs on Google Colab
+
+faceDetect.py is a file using OpenCV
+
+faceDetectUsingBaiduAPI is a file using Baidu official API, it could help us detect face easily.
+
+premodel is a directory containing models downloading from the website
+
+testdata is a directory containing few data which we could use, and these pictures are downloading from Columbia University
+http://www.cs.columbia.edu/CAVE/databases/pubfig/download/
