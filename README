@@ -11,7 +11,7 @@ premodel is a directory containing models downloading from the website
 testdata is a directory containing few data which we could use, and these pictures are downloading from Columbia University
 http://www.cs.columbia.edu/CAVE/databases/pubfig/download/
 
-<hr>
+****
 Update
 上午1:20
 2019年6月12日
@@ -21,3 +21,5 @@ this is an example to identify whether two people in the picture is the same peo
 
 add files of a test of SSR_NET using the model optimized for Asian
 using the command like "python SSRNET_test.py data/test/*.mp4 OR gif '3'" in the directory SSR_NET_Test
+
+****
