@@ -47,6 +47,7 @@ if __name__ == '__main__':
     cap = cv.VideoCapture(0)
     # 尝试使用本地数据
     # cap = cv.VideoCapture("testdata/2.jpg")
+    # cap = cv.VideoCapture("../SSR_NET_Test/data/test/test9.jpg")
     padding = 20
     while cv.waitKey(1) < 0:
         # Read frame

@@ -2,24 +2,36 @@ This is a project for detecting face or recognizing faces
 
 faceDetect.ipynb is a file using dlib which is a python library, and this file runs on Google Colab
 
-faceDetect.py is a file using OpenCV
+***
 
-faceDetectUsingBaiduAPI is a file using Baidu official API, it could help us detect face easily.
-
-premodel is a directory containing models downloading from the website
-
+OpenCV is a directory containing modeling downloading from the official website of OpenCV,
+so faceDetect.py is a file using OpenCV;premodel is a directory containing models downloading from the website
 testdata is a directory containing few data which we could use, and these pictures are downloading from Columbia University
 http://www.cs.columbia.edu/CAVE/databases/pubfig/download/
+
+***
+
+faceDetectUsingBaiduAPI.py is a file using Baidu official API, it could help us detect face easily.
 
 ****
 Update
 上午1:20
 2019年6月12日
 Greenwich Mean Time (GMT)
-add a file face_recognition.ipynb which is a file using face_recognition library based on dlib
-this is an example to identify whether two people in the picture is the same people
+add a file face_recognition.ipynb which is a file using face_recognition library based on dlib,
+and this is an example to identify whether two people in the picture is the same people
+
+***
 
 add files of a test of SSR_NET using the model optimized for Asian
 using the command like "python SSRNET_test.py data/test/*.mp4 OR gif '3'" in the directory SSR_NET_Test
 
 ****
+
+Update
+
+
+age_gender_estimation is a a Keras implementation of a CNN for estimating age and gender from a face image [1, 2]. In training, the IMDB-WIKI dataset is used.
+The pretrained model for TensorFlow backend will be automatically downloaded to the pretrained_models directory.
+Just using the command like "python age_gender_estimation.py --image_dir data/" it can run to test for the demos in the directory data which must exist
+And now the result will save in the "result.csv"
