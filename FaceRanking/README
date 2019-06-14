@@ -1,0 +1,18 @@
+### Face Scoring - Score Face by CNN Model based on TensorFlow
+
+Dataset
+   Download: http://www.hcii-lab.net/data/SCUT-FBP/EN/download.html
+
+Paper:SCUT-FBP: A Benchmark Datasetfor Facial Beauty Perception
+submit to SMC2015
+link=https://arxiv.org/ftp/arxiv/papers/1511/1511.02459.pdf
+
+An introduction from dataset
+"A novel face dataset with attractiveness ratings, namely the SCUT-FBP dataset(A dataset for facial beauty perception), is developed for automatic facial beauty perception in this work. The dataset provides a benchmark to evaluate the performance of different methods for facial attractiveness prediction, including the state-of-the-art deep learning method. The SCUT-FBP dataset contains 500 different Asian female subjects with attractiveness ratings, all of which have been verified in terms of rating distribution, standard deviation, consistency, and self-consistency. Benchmark evaluation for facial attractiveness prediction were performed using different combinations of facial geometrical features, texture features, and classical statistical learning methods, as well as the deep learning method. The best Pearson correlation of 0.8187 is achieved by the CNN model, and experiments indicate that the SCUT-FBP dataset provides a reliable benchmark for facial beauty perception. "
+
+
+What's more:
+sheet_name=None indicates you want a dictionary of dataframes, each item in the dictionary representing a different worksheet.
+Do not specify sheet_name if there is only a single worksheet in your workbook.
+
+Alternatively, if you have multiple worksheets and you only want to read in one, specify it explicitly, e.g. sheet_name='my_sheet_name'.
