@@ -29,7 +29,7 @@ using the command like "python SSRNET_test.py data/test/*.mp4 OR gif '3'" in the
 ****
 
 Update
-Wednesday, June 12, 2019
+Thursday, June 13, 2019
 
 age_gender_estimation is a a Keras implementation of a CNN for estimating age and gender from a face image [1, 2]. In training, the IMDB-WIKI dataset is used.
 The pretrained model for TensorFlow backend will be automatically downloaded to the pretrained_models directory.
@@ -43,3 +43,12 @@ Update
 Friday, June 14, 2019
 add FaceRank using pretrained model from face_rank_model.h5
 just run predict.py so it will automatically create a result.csv file to save the results, the test pictures are in the file data
+
+****
+Update
+7:27:19 AM
+Tuesday, June 18, 2019
+UTC/GMT is 07:27 on Tuesday, June 18, 2019
+
+Add Image Correction directory
+It can revise the italic photos especially those with identity cards, and it can catch the faces and save it in the result directory.
