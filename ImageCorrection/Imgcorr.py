@@ -254,9 +254,12 @@ def imgCorrect(input_file):
     else:
         gray = img
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=4)
+    # edges = canny(gray, sigma=3)
+    # plt.imshow(edges,plt.cm.gray)
+    # plt.show()
     result = []
     for (x, y, width, height) in faces:
-        result.append((x, y, x + width, y + height))
+        result.append((x-0.3*width, y-0.4*height, x+1.3*width, y + 1.4*height))
     if len(result) == 0:
         rotated = rotate(rotated, 180, resize=True)
         plt.figure(1)
@@ -271,23 +274,41 @@ def imgCorrect(input_file):
         faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=4)
         result = []
         for (x, y, width, height) in faces:
-            result.append((x, y, x + width, y + height))
+            result.append((x-0.3*width, y-0.4*height, x+1.3*width, y + 1.4*height))
         if result:
             for (x1, y1, x2, y2) in result:
-                test = Image.open("test.jpg").crop((x1-7, y1-15, x2+8, y2+10))
+                test = Image.open("test.jpg").crop((x1, y1, x2, y2))
                 test.save("result/" + str(re.split('\\\\',input_file)[-1]))
+        else:
+            print("error!"+str(re.split('\\\\',input_file)[-1]))
     else:
         for (x1, y1, x2, y2) in result:
-            test=Image.open("test.jpg").crop((x1-7, y1-15, x2+8, y2+10))
+            test=Image.open("test.jpg").crop((x1, y1, x2, y2))
             test.save("result/" + str(re.split('\\\\',input_file)[-1]))
 
 
+def ImgResize(input_file):
+    img = cv.imread(input_file, cv.IMREAD_UNCHANGED)
+    if img.shape[1] > 1500:
+        scale_percent = 60  # percent of original size
+        width = int(img.shape[1] * scale_percent / 100)
+        height = int(img.shape[0] * scale_percent / 100)
+        dim = (width, height)
+        # resize image
+        resized = cv.resize(img, dim, interpolation=cv.INTER_AREA)
+        cv.imwrite('data/'+str(re.split('\\\\',input_file)[-1]),resized)
+        imgCorrect('data/'+str(re.split('\\\\',input_file)[-1]))
+    else:
+        imgCorrect(input_file)
+
 def CorrectAll():
-    files = glob.glob(r"data/*")
+    files = glob.glob(r"data/*.*")
     for f in files:
         # print(re.split('\\\\',f))
-        imgCorrect(f)
+        # imgCorrect(f)
+        ImgResize(f)
     print("finished")
+
 
 
 # main函数

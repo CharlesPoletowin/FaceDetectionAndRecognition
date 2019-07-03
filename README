@@ -52,3 +52,10 @@ UTC/GMT is 07:27 on Tuesday, June 18, 2019
 
 Add Image Correction directory
 It can revise the italic photos especially those with identity cards, and it can catch the faces and save it in the result directory.
+
+
+***
+Update
+UTC/GMT is 06:29 on Wednesday, July 3, 2019
+Adjust the size of files which will input in imgcorr.py, so it could accelerate computing speed for the large files.
+Delete those useless data 
