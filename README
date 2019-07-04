@@ -58,4 +58,13 @@ It can revise the italic photos especially those with identity cards, and it can
 Update
 UTC/GMT is 06:29 on Wednesday, July 3, 2019
 Adjust the size of files which will input in imgcorr.py, so it could accelerate computing speed for the large files.
-Delete those useless data 
+Delete those useless data
+
+***
+Update
+UTC/GMT is 08:11 on Thursday, July 4, 2019
+ Schroff F , Kalenichenko D , Philbin J . [IEEE 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) - Boston, MA, USA (2015.6.7-2015.6.12)] 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) - FaceNet: A unified embedding for face recognition and clustering[J]. 2015:815-823.
+ a TensorFlow implementation of the face recognizer described in the paper "FaceNet: A Unified Embedding for Face Recognition and Clustering".
+
+ This is a demo for comparing the distances between different people.
+ If the distance is below 1.1, we assume they're the same people,otherwise they are different people.
